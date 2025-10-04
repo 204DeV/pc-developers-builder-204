@@ -1,4 +1,4 @@
-#!/bin/bash
+\#!/bin/bash
 set -e
 
 echo "🚀 Starting setup for P & C Developers Builder 204..."
@@ -19,7 +19,13 @@ echo "https://$GITHUB_USER:$GITHUB_PAT@github.com" > ~/.git-credentials
 
 # === Create GitHub repo if not exists ===
 echo "📡 Creating GitHub repo $REPO_NAME..."
-curl -s -H "Authorization: token $GITHUB_PAT" https://api.github.com/user/repos -d "{\"name\":\"$REPO_NAME\"}" | jq .
+# === Create GitHub repo if it does not exist ===
+if curl -s -H "Authorization: token $GITHUB_PAT" https://api.github.com/repos/$GITHUB_USER/$REPO_NAME | grep -q '"id":'; then
+  echo "✅ Repo $REPO_NAME already exists on GitHub."
+else
+  echo "📡 Creating new repo $REPO_NAME..."
+  curl -s -H "Authorization: token $GITHUB_PAT" https://api.github.com/user/repos -d "{\"name\":\"$REPO_NAME\"}" | jq .
+fi
 
 # === Project structure ===
 mkdir -p ~/$REPO_NAME/{pc-extension-pack-204,workspace-204/{frontend-204,backend-204,database-204,ai-204}}
