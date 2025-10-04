@@ -1,0 +1,9 @@
+CREATE DATABASE pc_builder_204;
+USE pc_builder_204;
+
+CREATE TABLE developers_204 (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(150),
+  joined_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
