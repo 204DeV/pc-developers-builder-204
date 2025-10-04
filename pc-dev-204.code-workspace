@@ -1,0 +1,24 @@
+{
+  "folders": [
+    {
+      "path": "workspace-204/frontend-204"
+    },
+    {
+      "path": "workspace-204/backend-204"
+    },
+    {
+      "path": "workspace-204/database-204"
+    },
+    {
+      "path": "workspace-204/ai-204"
+    }
+  ],
+  "settings": {
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 3000,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "git.postCommitCommand": "sync",
+    "git.confirmSync": false
+  }
+}
