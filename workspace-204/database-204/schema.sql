@@ -1,6 +1,5 @@
 CREATE DATABASE pc_builder_204;
 USE pc_builder_204;
-
 CREATE TABLE developers_204 (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100),

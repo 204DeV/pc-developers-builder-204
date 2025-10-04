@@ -1,8 +1,8 @@
 <?php
 header('Content-Type: application/json');
 echo json_encode([
-  "status" => "Backend API active",
+  "status" => "Backend active",
   "project" => "P & C Developers Builder 204",
-  "timestamp" => date("Y-m-d H:i:s")
+  "time" => date("Y-m-d H:i:s")
 ]);
 ?>

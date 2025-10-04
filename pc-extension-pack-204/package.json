@@ -3,10 +3,10 @@
   "displayName": "P & C Developers Builder 204 Pack",
   "description": "All-in-one AI-assisted full-stack environment for Chromebook ARM64 — PHP, MySQL, Supabase, Stripe, and Lovable.dev-style coding.",
   "version": "1.0.0",
-  "publisher": "petruzimbru",
+  "publisher": "204DeV",
   "repository": {
     "type": "git",
-    "url": "https://github.com/<204DeV>/pc-developers-builder-204.git"
+    "url": "https://github.com/204DeV/pc-developers-builder-204.git"
   },
   "license": "MIT",
   "engines": { "vscode": "^1.50.0" },
