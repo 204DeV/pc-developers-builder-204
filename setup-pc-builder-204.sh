@@ -154,7 +154,12 @@ git init
 git add .
 git commit -m "Initial commit: P & C Developers Builder 204"
 git branch -M main
-git remote add origin https://github.com/$GITHUB_USER/$REPO_NAME.git
+# === Set remote only if it doesn't exist ===
+if git remote | grep -q origin; then
+  echo "✅ Remote origin already set."
+else
+  git remote add origin https://github.com/$GITHUB_USER/$REPO_NAME.git
+fi
 git push -u origin main
 
 # === Auto branch alias ===
